@@ -13,11 +13,11 @@
             </div>
             <div style="float: right;">
                 <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="" class="nav-link">共计：{{$all}}件设备</a></li>
                     <li class="nav-item"><a href="./devices/add" class="nav-link">增添设备</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">删除设备</a></li>
                     <li class="nav-item">
                         <form action="" class="form-horizontal bd-search d-none d-sm-block" >
-                            <input type="search" class="form-control" placeholder="Search...">
+                            <input type="search" class="form-control" placeholder="查询...">
                         </form>
                     </li>
                 </ul>

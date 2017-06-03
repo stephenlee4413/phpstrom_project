@@ -77,7 +77,8 @@ class TaskPushController extends Controller
 //        $task->user_id=\request('user_id');
 //        $task->save();
 
-
+        /*测试返回数据形式
+                return dd($_POST);*/
         return redirect('/');
     }
 

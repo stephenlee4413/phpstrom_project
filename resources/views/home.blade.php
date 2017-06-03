@@ -16,8 +16,15 @@
                         <a href="./show">任务管理平台</a>
                     </h2>
                 </div>
-                <div class="panel-heading"><h2 class="panel-primary"><a href="./devices">资产管理平台</a></h2>
-
+                <div class="panel-heading">
+                    <h2 class="panel-primary">
+                        <a href="./devices">资产管理平台</a>
+                    </h2>
+                </div>
+                <div class="panel-heading">
+                    <h2 class="panel-primary">
+                        <a href="./counting">统计分析图表</a>
+                    </h2>
                 </div>
             </div>
         </div>

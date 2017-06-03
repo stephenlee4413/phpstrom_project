@@ -52,3 +52,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/devices','DeviceController@index');
 //添加设备记录
 Route::get('/devices/add','DeviceController@add');
+//存储设备数据
+Route::post('devices/add','DeviceController@store');
+//显示统计数据
+Route::get('/counting','CountController@index');
