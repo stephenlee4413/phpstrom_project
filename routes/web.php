@@ -22,7 +22,9 @@ Route::get('/about/{task}/edit','TaskPushController@edit');
 Route::post('/about','TaskPushController@store');
 Route::post('/about/{task}','TaskPushController@update');
 Route::resource('/tasks','PushTaskController');
-
+//发布新任务路由
+Route::get('/newtask','TaskPushController@newtask');
+Route::post('/newtask','TaskPushController@publish');
 Route::get('/summary','ProduceSummary@index');
 
 //直观的路由方式
@@ -56,3 +58,28 @@ Route::get('/devices/add','DeviceController@add');
 Route::post('devices/add','DeviceController@store');
 //显示统计数据
 Route::get('/counting','CountController@index');
+Route::get('/counting_show','CountController@show');
+//全文检索
+Route::post('/devices','DeviceController@search');
+/*
+|--------------------------------------------------------------------------
+| //文件导出路由配置
+|--------------------------------------------------------------------------*/
+//导出excel
+Route::get('/export','ExportController@export');
+
+/*
+|--------------------------------------------------------------------------
+| //科室资料归档
+|--------------------------------------------------------------------------*/
+
+Route::get('/files','DocumentController@index');
+Route::post('/files','DocumentController@search');
+Route::get('/files/upload','DocumentController@upload');
+Route::post('/files/upload','DocumentController@storeUpload');
+
+/*
+|--------------------------------------------------------------------------
+| //考试项目管理
+|--------------------------------------------------------------------------*/
+Route::get('/exams','ExamController@index');

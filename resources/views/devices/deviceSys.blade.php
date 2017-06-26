@@ -7,17 +7,19 @@
 @include('layout.master')
 <div class="container">
     <div class="row">
-        <div style="display: flex;">
-            <div style="margin-right: 25em;">
-                <h2>科室设备管理信息库</h2>
+        <div class="col-lg-12" style="display: flex;">
+            <div style="justify-content: flex-start">
+                <a href="./devices"><h2>科室设备管理信息库</h2></a>
             </div>
-            <div style="float: right;">
+            <div style="justify-content: flex-end">
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a href="" class="nav-link">共计：{{$all}}件设备</a></li>
                     <li class="nav-item"><a href="./devices/add" class="nav-link">增添设备</a></li>
+                    <li class="nav-item"><a href="./export" class="nav-link">导出设备记录</a></li>
                     <li class="nav-item">
-                        <form action="" class="form-horizontal bd-search d-none d-sm-block" >
-                            <input type="search" class="form-control" placeholder="查询...">
+                        <form method="post" action="./devices" class="form-horizontal bd-search d-none d-sm-block" >
+                            {{ csrf_field() }}
+                            <input type="text" name="search" class="form-control" placeholder="查询...">
                         </form>
                     </li>
                 </ul>

@@ -2,7 +2,12 @@
 <div class="container">
        <div class="row">
         <div class="col-lg-12">
-            <h2 class="label-primary text-info">任务发布列表</h2>
+            <a href="./show"><h2 class="label-primary text-info" style="display: inline;">任务发布列表</h2></a>
+            <div class="" style="float: right">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="./newtask" class="nav-link">发布新任务</a></li>
+                </ul>
+            </div>
                  <table class="table table-bordered table-hover">
                     <thead>
                     <tr>

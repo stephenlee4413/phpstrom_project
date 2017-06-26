@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+//            $table->renameColumn('name','accoutname');
+//            $table->addColumn('realname')->unique();
         });
     }
 

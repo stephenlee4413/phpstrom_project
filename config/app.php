@@ -181,7 +181,17 @@ return [
         //安装laravel ide helper
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
+//        安装laravel excel处理包
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+//        安装scout全文检索
+        Laravel\Scout\ScoutServiceProvider::class,
+//        安装laravel debugbar
+        Barryvdh\Debugbar\ServiceProvider::class,
+//        安装生成统计图表的插件
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
+
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -229,6 +239,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Charts' => ConsoleTVs\Charts\Charts::class,
+
 
     ],
 

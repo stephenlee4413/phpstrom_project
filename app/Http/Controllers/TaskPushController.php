@@ -81,7 +81,19 @@ class TaskPushController extends Controller
                 return dd($_POST);*/
         return redirect('/');
     }
+//    发布新任务
+    public function newtask(){
+        return view('tasks.newtask');
+    }
+    public function publish(Request $request){
+        if(Task::create(\request()->all())){
+            return redirect('/show');
+        }
+        return 'whoops ,You get a error';
+//          dd($request->all());
+//        return 'ok';
 
+    }
 //    需要登录才能访问
     public function __construct()
     {
