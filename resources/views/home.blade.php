@@ -9,7 +9,7 @@
                         <h2 class="panel-primary">管理面板</h2>
                     </div>
                     <div class="panel-body">
-                        恭喜你，已经成功登录！<br>
+                        恭喜你，已经成功登录！<br/>
                         上一次登录时间是：<b style="color: blue;">{{$lastlogin}}</b>
                     </div>
                 </div>
