@@ -31,7 +31,7 @@ $factory->define(App\Device::class,function (Faker\Generator $faker){
         'device_department'=>('教学服务部'),
         'device_location'=>('思学楼'),
         'device_buy'=>$faker->date(),
-        'device_owner'=>('陈梅'),
+        'device_owner'=>$faker->randomElement(['李旭','熊志','向海昀','郭志','向月','张玲','杨京']),
     ];
 });
 

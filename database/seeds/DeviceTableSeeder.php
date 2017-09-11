@@ -20,9 +20,9 @@ class DeviceTableSeeder extends Seeder
             'device_department'=>('教学服务部'),
             'device_location'=>str_contains('思学楼',[0-9]),
             'device_buy'=>date('2013-11-30'),
-            'device_owner'=>('陈梅'),
+            'device_owner'=>('李旭'),
 
         ]);*/
-        factory(App\Device::class,10)->create();
+        factory(App\Device::class,15)->create();
     }
 }

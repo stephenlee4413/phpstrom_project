@@ -18,7 +18,14 @@ class DeviceController extends Controller
     }
     //取出设备资产全部数据
     public function index(){
-        $devices = Device::paginate();
+//        $devices = Device::paginate();
+        $authuser = \Auth::user()->getAttributeValue('name'); //获取当前登录的用户名
+        if ($authuser == '李旭'){
+            $devices = Device::paginate();
+        }
+        else{
+            $devices = Device::where('device_owner','=',$authuser)->paginate();
+        }
         $all = Device::all()->count();
         return view('devices.deviceSys',compact('devices','all'));//返回设备管理首页
 //        return $devices;

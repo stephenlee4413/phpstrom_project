@@ -6,21 +6,31 @@
  * Date: 2017/6/2
  * Time: 21:21
  */--}}
-<!DOCTYPE html>
-<html lang="zh">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@include('layout.master')
+{{--<!DOCTYPE html>--}}
+{{--<html lang="zh">--}}
+    {{--<head>--}}
+        {{--<title></title>--}}
+        {{--<meta charset="UTF-8">--}}
+        {{--<meta name="viewport" content="width=device-width, initial-scale=1">--}}
         {{--<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>--}}
-        <script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
-        <script src="http://cdn.bootcss.com/echarts/3.6.1/echarts.min.js"></script>
-    </head>
-    <body>
+        {{--<script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>--}}
+        {{--<script src="http://cdn.bootcss.com/echarts/3.6.1/echarts.min.js"></script>--}}
+    {{--</head>--}}
+    {{--<body>--}}
         {{--<div id="container" style="min-width:400px;height:400px"></div>--}}
-        <div id="main" style="width: 600px;height:400px;float: left;"></div>
-        <div id="main2" style="min-width:600px;height:400px;float: right;"></div>
-
+    <div class="container">
+        <div class="row" style="margin: auto">
+            <div class="col-lg-6" id="main" style="width: 600px;height:400px;float: left;"></div>
+            <div class="col-lg-6" id="main2" style="width:600px;height:400px;float: right;"></div>
+            <div class="col-lg-12 text-primary" style="background-color:#CCCCCC;">
+                <a href="http://met.swpu.edu.cn"><b style="margin-right: 20px;">科室简介</b></a>
+                <a href="http://met.swpu.edu.cn/2015style/2015moban/new_yjfk.jsp?urltype=tree.TreeTempUrl&wbtreeid=1222"><b style="margin-right: 20px;">反馈留言</b></a>
+                <b>联系我们:</b><a href="mailto:#"> lixu@swpu.edu.cn</a>
+                <a href="/"> <b style="margin-left: 20px;">管理平台</b></a>
+            </div>
+        </div>
+</div>
         {{--<script>
             var chart = new Highcharts.Chart('container', {// 图表初始化函数，其中 container 为图表的容器 div
                 chart: {
@@ -220,6 +230,5 @@
                 });
             });
         </script>
-    </body>
-</html>
+
 

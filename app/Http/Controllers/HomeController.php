@@ -23,7 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $lastlogin = \Auth::user()->getAttributeValue('updated_at');
+        return view('home',compact('lastlogin'));
+
     }
 
 }
